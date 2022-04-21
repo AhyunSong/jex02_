@@ -15,7 +15,6 @@ import javax.sql.DataSource;
 @ComponentScan(basePackages = {"org.zerock.sample"})
 @MapperScan(basePackages = {"org.zerock.mapper"})
 public class RootConfig {
-
     @Bean
     public DataSource dataSource() {
         HikariConfig hikariConfig = new HikariConfig();
@@ -24,8 +23,8 @@ public class RootConfig {
         hikariConfig.setDriverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");
         hikariConfig.setJdbcUrl("jdbc:log4jdbc:oracle:thin:@183.98.24.70:51522:orcl11");
 
-        hikariConfig.setUsername("book_ex");
-        hikariConfig.setPassword("book_ex");
+        hikariConfig.setUsername("book_es");
+        hikariConfig.setPassword("book_es");
 
         HikariDataSource dataSource = new HikariDataSource(hikariConfig);
 
